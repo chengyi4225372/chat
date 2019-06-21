@@ -1,0 +1,132 @@
+<include file="Public/top" />
+<include file='Public/left' />
+		<!-- BEGIN PAGE -->
+
+		<div class="page-content">
+
+			<!-- BEGIN PAGE CONTAINER-->        
+
+			<div class="container-fluid">
+
+				<!-- BEGIN PAGE HEADER-->
+
+				<div class="row-fluid">
+
+					<div class="span12">
+
+
+						<!-- BEGIN PAGE TITLE & BREADCRUMB-->
+
+						<h3 class="page-title">
+
+								{:F('title')}  <small>后台管理</small>
+
+						</h3>
+
+						<ul class="breadcrumb">
+
+							<li>
+								<i class="icon-home"></i>
+								<a href="{:T('Index/Index')}">首页</a>
+								<i class="icon-angle-right"></i>
+							</li>
+
+							<li>
+								<a href="{:T('Goods/Index')}">项目管理</a>
+								<i class="icon-angle-right"></i>
+							</li>
+							<li><a href="">项目列表</a></li>
+						</ul>
+
+						<!-- END PAGE TITLE & BREADCRUMB-->
+
+					</div>
+
+				</div>
+
+				<!-- END PAGE HEADER-->
+
+				<!-- BEGIN PAGE CONTENT-->
+
+				<div class="row-fluid">
+					<div class="span12">
+						<!-- BEGIN EXAMPLE TABLE PORTLET-->
+						<div class="portlet box grey">
+							<div class="portlet-title">
+								<div class="caption"><i class="icon-edit"></i></div>
+
+								<div class="tools">
+
+									<a href="javascript:;" class="collapse"></a>
+
+									<a href="javascript:;" class="reload"></a>
+
+									<a href="javascript:;" class="remove"></a>
+
+								</div>
+
+							</div>
+
+							<div class="portlet-body">
+
+								<div class="clearfix">
+
+									
+
+								</div>
+
+								<table class="table table-striped table-hover table-bordered" id="sample_editable_1">
+
+									<thead>
+
+										<tr>
+											<th class="span6">订单编号</th>
+											<th class="span3">创建时间</th>
+											<th class="span3">项目标题</th>
+											<th class="span3">项目分类</th>
+											<th class="span3">项目金额</th>
+											<th class="span2">操作</th>
+										</tr>
+
+									</thead>
+									<tbody>
+									<foreach $list as $v>
+									<tr class="">
+											<td style='vertical-align:sub'>{$v['order_num']}</td>
+											<td style='vertical-align:sub'>{:date('Y-m-d',$v['create_time'])}</td>
+											<td style='vertical-align:sub'>{$v['title']}</td>
+											<td style='vertical-align:sub'>{$v['cate_id']}</td>
+											<td style='vertical-align:sub'>{$v['price']}</td>
+											<td style='vertical-align:sub;text-align:center'>
+												<a class="edit btn mini blue" href="{:T('Goods/Edit?id='.$v['id'])}"> <i class="icon-pencil"></i> 详情</a>
+											</td>														
+										</tr>
+									</foreach>
+									</tbody>
+
+								</table>
+{$page}
+							</div>
+
+						</div>
+
+						<!-- END EXAMPLE TABLE PORTLET-->
+
+					</div>
+
+				</div>
+
+				<!-- END PAGE CONTENT -->
+
+			</div>
+
+			<!-- END PAGE CONTAINER-->
+
+		</div>
+
+		<!-- END PAGE -->
+
+	</div>
+
+	<!-- END CONTAINER -->
+	<include file="Public/foot" />

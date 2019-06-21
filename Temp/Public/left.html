@@ -1,0 +1,172 @@
+
+	<!-- BEGIN CONTAINER -->
+
+	<div class="page-container row-fluid">
+
+		<!-- BEGIN SIDEBAR -->
+
+		<div class="page-sidebar nav-collapse collapse">
+
+			<!-- BEGIN SIDEBAR MENU -->        
+
+			<ul class="page-sidebar-menu">
+
+				<li class="start ">
+
+					<a href="{:T('Index/Index')}">
+
+					<i class="icon-home"></i> 
+
+					<span class="title">后台首页</span>
+
+					</a>
+
+				</li>
+				
+				<li  >
+					<a href="javascript:;">
+					<i class="icon-user"></i>
+					<span class="title">用户管理</span>
+					</a>
+
+					<ul class="sub-menu" <if $_GET[m] == 'Member'>style="display: block;"</if>>
+				         <li<if $_GET[a]=='Add'>class='active'</if>>
+				         <a href="{:T('Member/add')}">添加用户</a>
+		 		         </li>
+			        	<li<if $_GET[a]=='Index' && $_GET[m] == "member">class='active'</if>>
+			         	<a href="{:T('Member/Index')}">用户列表</a>
+			        	</li>
+			  <!--
+						<li <if $_GET[a] == 'Vip'>class='active'</if>>
+
+							<a href="{:T('User/Vip')}">
+
+							已认证的公司</a>
+						</li>
+					<li <if $_GET[a] == 'Cert1'>class='active'</if>>
+
+							<a href="{:T('User/Cert1')}">
+
+							已认证的个人</a>
+						</li>
+						-->
+					</ul>
+
+				</li>
+
+				<li>
+
+					<a href="javascript:;">
+
+					<i class="icon-book"></i> 
+						<span class="title">业务管理</span>
+					</a>
+
+					<ul class="sub-menu" <if $_GET[m] == 'Order'>style="display: block;"</if> > 
+
+						<li <if $_GET[a] == 'Index'>class='active'</if>>
+							<a href="{:T('Order/Index')}">
+							开票申请</a>
+						</li>
+						<li <if $_GET[a] == 'BillLog'>class='active'</if>>
+							<a href="{:T('Order/BillLog')}">
+							开票记录</a>
+						</li>
+
+						<li <if $_GET[a] == 'InvestLog'>class='active'</if>>
+							<a href="{:T('Order/InvestLog')}">
+							充值记录</a>
+						</li>
+						<li <if $_GET[a] == 'Set'>class='active'</if>>
+							<a href="{:T('Order/Set')}">
+							税费设置</a>
+						</li>
+
+					</ul>
+
+				</li>
+				<li>
+
+					<a href="javascript:;">
+
+					<i class="icon-list-alt"></i> 
+						<span class="title">项目管理</span>
+					</a>
+					<ul class="sub-menu" <if $_GET[m] == 'Goods'>style="display: block;"</if> >
+		                <li <if $_GET[a] == 'cates'>class='active'</if>>
+		                    <a href="{:T('Goods/cates')}">项目类型</a>
+		                </li>
+						<li <if $_GET[a] == 'Add'>class='active'</if>>
+							<a href="{:T('Goods/add')}">添加项目</a>
+						</li>
+						<li <if $_GET[a] == 'Index'>class='active'</if>>
+							<a href="{:T('Goods/Index')}">项目列表</a>
+						</li>
+					</ul>
+
+				</li>
+				<li>
+
+					<a href="javascript:;">
+
+					<i class="icon-list-alt"></i> 
+						<span class="title">税务管理</span>
+					</a>
+
+					<ul class="sub-menu" <if $_GET[m] == 'Tax'>style="display: block;"</if> > 
+
+						<li <if $_GET[a] == 'Risk'>class='active'</if>>
+							<a href="{:T('Tax/Risk')}">
+							报税风险管理</a>
+						</li>
+						<li <if $_GET[a] == 'Appraise'>class='active'</if>>
+							<a href="{:T('Tax/Appraise')}">
+							报税评价管理</a>
+						</li>
+					</ul>
+
+				</li>
+				<li>
+
+					<a href="javascript:;">
+
+					<i class="icon-cog"></i> 
+
+					<span class="title">网站设置</span>
+
+					</a>
+
+					<ul class="sub-menu" <if $_GET[a] == 'Webset'>style="display: block;"</if>> 
+						<li <if  $_GET[a] == 'Webset'>class='active'</if>>
+
+							<a href="{:T('Index/Webset')}">
+
+							基本设置</a>
+
+						</li>
+
+					</ul>
+
+				</li>
+				
+	
+				
+				<li class="last ">
+
+					<a href="http://www.qingbug.com">
+
+					<i class="icon-bar-chart"></i> 
+
+					<span class="title">Chinax3 framework</span>
+
+					</a>
+
+				</li>
+
+			</ul>
+
+			<!-- END SIDEBAR MENU -->
+
+		</div>
+
+		<!-- END SIDEBAR -->
