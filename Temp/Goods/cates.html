@@ -87,11 +87,11 @@
                             <tbody>
                             <foreach $list as $v>
                                 <tr class="">
-                                    <td style='vertical-align:sub'>{:date('Y-m-d',$v['create_time'])}</td>
+                                    <td style='vertical-align:sub'>{:date('Y-m-d,H:i:s',$v['create_time'])}</td>
                                     <td style='vertical-align:sub'>{$v['title']}</td>
                                     <td style='vertical-align:sub;text-align:center'>
                                         <a class="edit btn mini green" href="{:T('Goods/cates_edit?id='.$v['id'])}"> <i class="icon-pencil"></i>编辑</a>
-                                        <a class="edit btn mini blue" href="{:T('Goods/cates_del?id='.$v['id'])}"> <i class="icon-pencil"></i>删除</a>
+                                        <a class="edit btn mini blue" href="{:T('Goods/cates_del?id='.$v['id'])}" > <i class="icon-pencil"></i>删除</a>
                                     </td>
                                 </tr>
                             </foreach>
@@ -128,4 +128,5 @@
     function tab_url(){
         location.href="{:T('Goods/cates_add')}";
     }
+
 </script>

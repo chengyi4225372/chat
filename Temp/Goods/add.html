@@ -63,7 +63,11 @@
                                     <tr>
                                         <td>项目类型</td>
                                         <td style="width:15%">
-
+                                                    <select name="" id="">
+                                                        <foreach $cates as $vo>
+                                                            <option value="{$vo['id']}">{$vo['title']}</option>
+                                                        </foreach>
+                                                    </select>
                                         </td>
                                     </tr>
                                     <tr>
@@ -96,7 +100,11 @@
                                     <tr>
                                         <td>选择结算方式</td>
                                         <td style="width:15%">
-
+                                            <input type="radio" name="paytype" value="按时">按时
+                                            <input type="radio" name="paytype" value="按月">按月
+                                            <input type="radio" name="paytype" value="按季">按季
+                                            <input type="radio" name="paytype" value="半年">半年
+                                            <input type="radio" name="paytype" value="按年">按年
                                         </td>
                                     </tr>
                                     <!-- todo 时间段暂时未使用 -->
