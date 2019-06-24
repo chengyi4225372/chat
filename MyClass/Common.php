@@ -28,4 +28,7 @@ class Common extends \C\Action{
 		session('uid',null);
 		$this->success("退出成功",T('Index/index'));
 	}
+
+
+
 }

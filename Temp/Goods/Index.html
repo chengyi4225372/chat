@@ -95,10 +95,11 @@
 											<td style='vertical-align:sub'>{$v['order_num']}</td>
 											<td style='vertical-align:sub'>{:date('Y-m-d',$v['create_time'])}</td>
 											<td style='vertical-align:sub'>{$v['title']}</td>
-											<td style='vertical-align:sub'>{$v['cate_id']}</td>
-											<td style='vertical-align:sub'>{$v['price']}</td>
+											<td style='vertical-align:sub'>{$v['cates_id']}</td>
+											<td style='vertical-align:sub'>{$v['money']}</td>
 											<td style='vertical-align:sub;text-align:center'>
 												<a class="edit btn mini blue" href="{:T('Goods/Edit?id='.$v['id'])}"> <i class="icon-pencil"></i> 详情</a>
+												<a class="delete btn mini red" href="{:T('Goods/Del_goods_order?id='.$v['id'])}" onclick="return confirm('你确定删除？')"> <i class="icon-pencil"></i> 删除</a>
 											</td>														
 										</tr>
 									</foreach>

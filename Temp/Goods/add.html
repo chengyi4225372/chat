@@ -63,11 +63,11 @@
                                     <tr>
                                         <td>项目类型</td>
                                         <td style="width:15%">
-                                                    <select name="" id="">
-                                                        <foreach $cates as $vo>
-                                                            <option value="{$vo['id']}">{$vo['title']}</option>
-                                                        </foreach>
-                                                    </select>
+                                            <select name="cates_id" id="cates_id">
+                                                <foreach $cates as $vo>
+                                                    <option value="{$vo['id']}">{$vo['title']}</option>
+                                                </foreach>
+                                            </select>
                                         </td>
                                     </tr>
                                     <tr>
@@ -100,18 +100,19 @@
                                     <tr>
                                         <td>选择结算方式</td>
                                         <td style="width:15%">
-                                            <input type="radio" name="paytype" value="按时">按时
-                                            <input type="radio" name="paytype" value="按月">按月
-                                            <input type="radio" name="paytype" value="按季">按季
-                                            <input type="radio" name="paytype" value="半年">半年
-                                            <input type="radio" name="paytype" value="按年">按年
+                                            <input type="radio" name="paytype" value="1">按时
+                                            <input type="radio" name="paytype" value="2">按月
+                                            <input type="radio" name="paytype" value="3">按季
+                                            <input type="radio" name="paytype" value="4">半年
+                                            <input type="radio" name="paytype" value="5">按年
                                         </td>
                                     </tr>
                                     <!-- todo 时间段暂时未使用 -->
                                     <tr>
                                         <td>项目时间范围</td>
                                         <td>
-                            <!--     todo 注释{:date('Y-m-d H:i',$info[timeb])} - {:date('Y-m-d H:i',$info[timee])}-->
+                                            <input type="text" class="m-wrap m-ctrl-small"  name='protuct_time' id="dates" placeholder="请填写开始时间 - 结束时间 ">
+                                            <input type="radio" name="protuct_time" value="0">无限期
                                         </td>
                                     </tr>
                                     </tbody>
@@ -135,3 +136,39 @@
 
 <!-- END CONTAINER -->
 <include file="Public/foot" />
+<script>
+    layui.use('laydate', function() {
+        var laydate = layui.laydate;
+        //日期范围
+        laydate.render({
+            elem: '#dates'
+            , range: true
+        });
+    });
+
+    $('#add_good').click(function(){
+       var title = $("input[name='title']").val();
+       var cates_id = $("#cates_id").val();
+       var info = $("#info").val();
+       var money = $("input[name='money']").val();
+       var person = $("input[name='person']").val();
+       var tel = $("input[name='tel']").val();
+       var paytype = $("input[name='paytype']:checked").val();
+       var protuct_time = $("input[name='protuct_time']").val();
+       $.ajax({
+           url:"{:T('Goods/EditDo')}",
+           type:'post',
+           dataType:'json',
+           data:{'title':title,'cates_id':cates_id,'info':info,'money':money,'person':person,'tel':tel,'paytype':paytype,'protuct_time':protuct_time},
+           success:function(res){
+              if(res.status == '200'){
+                  layer.alert(res.msg, {icon: 6});
+                  window.location.reload();
+              }else{
+                  layer.alert(res.msg,{time:3000,icon: 5});
+                  window.location.href="{:T('Goods/add')}";
+              }
+           }
+       })
+    })
+</script>

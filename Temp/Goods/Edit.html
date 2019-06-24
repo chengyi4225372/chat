@@ -75,85 +75,79 @@
 
 					</div>
 					<div class="portlet-body form">
-						<form id='basic_validate' class="form-horizontal" action="{:T('Goods/EditDo')}" method="post" enctype="multipart/form-data">
+						<form id='basic_validate' class="form-horizontal" >
 						  <input name="id" type="hidden" value="{$info['id']}">
 						  <fieldset>
 							<table class="table sliders table-striped">
+								<tbody>
+								<tr>
+									<td style="width:15%">项目标题</td>
+									<td>
+										<input type="text" name="title" value="{$info['title']}">
+									</td>
+								</tr>
 
-									<tbody>
+								<!-- todo 类型未设置-->
+								<tr>
+									<td>项目类型</td>
+									<td style="width:15%">
+										<select name="cates_id" id="cates_id">
+											<foreach $cates as $vo>
+												<option value="{$vo['id']}" <if $info['cates_id'] == $vo['id']> selected='' </if> >{$vo['title']}</option>
+											</foreach>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>项目需求</td>
+									<td style="width:15%">
+										<textarea rows="5" cols="50" name="info" id="info">{$info['info']}</textarea>
+									</td>
+								</tr>
 
-										<tr>
+								<tr>
+									<td>项目金额</td>
+									<td style="width:15%">
+										<input type="text" name="money" value="{$info['money']}">:元
+									</td>
+								</tr>
+								<tr>
+									<td>项目负责人</td>
+									<td style="width:15%">
+										<input type="text" name="person" value="{$info['person']}">
+									</td>
+								</tr>
 
-											<td style="width:15%">项目标题</td>
+								<tr>
+									<td>负责人电话</td>
+									<td style="width:15%">
+										<input type="text" name="tel" value="{$info['tel']}">
+									</td>
+								</tr>
 
-											<td>
-
-												{$info[title]}
-											</td>
-
-										</tr>
-										<tr>
-
-											<td>工作时间段</td>
-
-											<td>
-
-												{:date('Y-m-d H:i',$info[timeb])} - {:date('Y-m-d H:i',$info[timee])}
-
-											</td>
-
-										</tr>
-										
-										<tr>
-
-											<td>项目类型</td>
-
-											<td style="type">
-				
-												{$info[titletype]}
-											</td>
-
-										</tr>
-
-										
-
-										<tr>
-
-											<td>项目预算</td>
-
-											<td>
-
-												<div id="slider-range-min" class="slider bg-yellow ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 5.15021%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 5.15021%;"></a></div>
-
-												<div class="slider-value">
-
-													{$info[price]} 元
-
-												</div>
-
-											</td>
-
-										</tr>
-
-										<tr>
-
-											<td>项目详情</td>
-
-											<td>
-
-												{$info[des]}
-
-											</td>
-
-										</tr>
-										
-
-									</tbody>
-
+								<tr>
+									<td>选择结算方式</td>
+									<td style="width:15%">
+										<input type="radio" name="paytype"  value="1" <if $info['paytype']== '1'> checked="" <else /> </if>>按时
+										<input type="radio" name="paytype" value="2" <if $info['paytype']== '2'> checked="" <else /> </if>>按月
+										<input type="radio" name="paytype" value="3" <if $info['paytype']== '3'> checked="" <else /> </if>>按季
+										<input type="radio" name="paytype" value="4" <if $info['paytype']== '4'> checked=""<else /> </if>>半年
+										<input type="radio" name="paytype" value="5" <if $info['paytype']== '5'> checked="" <else /> </if>>按年
+									</td>
+								</tr>
+								<!-- todo 时间段暂时未使用 -->
+								<tr>
+									<td>项目时间范围</td>
+									<td>
+										<input type="text" class="m-wrap m-ctrl-small"  name='protuct_time' id="dates"  <if $info['protuct_time'] != '0'> value="{$info['protuct_time']}" <else /> value='' </if>  >
+										<input type="radio" name="protuct_time" <if $info['protuct_time'] == '0' >checked=''<else /> </if> value="0">无限期
+									</td>
+								</tr>
+								</tbody>
 								</table>
 							<div class="form-actions">
-							   <button class="btn btn-primary green" type="submit">通过核审</button>
-							   <button class="btn red" type="reset">驳回</button>
+							   <button class="btn btn-primary green" type="button" id="save_goods">提交</button>
+							   <button class="btn red" type="reset">重置</button>
 							</div>
 						  </fieldset>
 						</form>				
@@ -177,3 +171,41 @@
 
 <!-- END CONTAINER -->
 <include file="Public/foot" />
+<script>
+	layui.use('laydate', function() {
+		var laydate = layui.laydate;
+		//日期范围
+		laydate.render({
+			elem: '#dates'
+			, range: true
+		});
+	});
+
+	$('#save_goods').click(function(){
+		var id = $("input[name='id']").val();
+		var title = $("input[name='title']").val();
+		var cates_id = $("#cates_id").val();
+		var info = $("#info").val();
+		var money = $("input[name='money']").val();
+		var person = $("input[name='person']").val();
+		var tel = $("input[name='tel']").val();
+		var paytype = $("input[name='paytype']:checked").val();
+		var protuct_time = $("input[name='protuct_time']").val();
+		$.ajax({
+			url:"{:T('Goods/EditDo')}",
+			type:'post',
+			dataType:'json',
+			data:{'title':title,'cates_id':cates_id,'info':info,'money':money,'person':person,'tel':tel,'paytype':paytype,'protuct_time':protuct_time,'id':id},
+			success:function(res){
+				if(res.status == '200'){
+					layer.msg(res.msg, {icon: 6});
+					window.location.href="{:T('Goods/index')}";
+				}else{
+					layer.msg(res.msg,{time:3000,icon: 5});
+					window.location.href="{:T('Goods/index')}";
+				}
+			}
+		})
+	})
+
+</script>

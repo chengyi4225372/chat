@@ -8,23 +8,58 @@ class Goods extends \MyClass\Common{
 		$this->s('list',$list)->s('page',$p->show())->v('Goods/Index');
 	}
 
-
 	public function add(){
 	    $cates = $this->m('hqy_protuct_cate')->order('id asc')->select();
 	    $this->s('cates',$cates)->v();
     }
 
-
-
 	public function Edit(){
 		$info = $this->m('hqy_protuct')->find($_GET['id']);
-		$this->s('info',$info)->v();
+        $cates = $this->m('hqy_protuct_cate')->order('id asc')->select();
+		$this->s('info',$info)->s('cates',$cates)->v();
 	}
 
 	//编辑提交
 	public function EditDo(){
+         $id =$_POST['id'];
+         $data['title']=$_POST['title'];
+         $data['cates_id']=$_POST['cates_id'];
+         $data['info']=$_POST['info'];
+         $data['money']=$_POST['money'];
+         $data['person']=$_POST['person'];
+         $data['tel']=$_POST['tel'];
+         $data['paytype']=$_POST['paytype'];
+         $data['protuct_time']=$_POST['protuct_time'];
+         if(empty($id)){
+             $data['create_time']= time();
+             $data['order_num'] = uniqid(date('ymd').mt_rand(1000,9999));
+             $res = $this->m('hqy_protuct')->add($data);
+             if($res){
+                 $this->ajax('200','添加成功！');
+             }else {
+                 $this->ajax('400','添加失败！');
+             }
+         }else{
+             $res = $this->m('hqy_protuct')->where('id ='.$id)->save($data);
+             if($res){
+                 $this->ajax('200','编辑成功!');
+             }else {
+                 $this->ajax('400','编辑失败！');
+             }
+         }
 
 	}
+
+
+	public function Del_goods_order(){
+         $id = $_GET['id'];
+         $res = $this->m('hqy_protuct')->where('id ='.$id)->del();
+         if($res){
+              $this->success('删除成功！',('Goods/index'));
+         }else{
+             $this->error('删除失败！');
+         }
+    }
 
 	/*
 	public function OkPay(){
@@ -80,16 +115,16 @@ class Goods extends \MyClass\Common{
     }
 
     public function cates_del(){
-       $id = $_GET['id'];
-       $cates = $this->m('hqy_protuct')->where('cate_id ='.$id)->find();
+       $id = $_POST['id'];
+       $cates = $this->m('hqy_protuct')->where('cates_id ='.$id)->find();
        if($cates){
-           $this->error('类型存在关联数据，不能删除！',t('Goods/Cates'));
+           $this->ajax('404','类型存在关联数据，不能删除！');
        }
        $res = $this->m('hqy_protuct_cate')->del($id);
        if($res){
-           $this->success('删除成功！',t('Goods/Cates'));
+           $this->ajax('200','删除成功！');
        }else{
-           $this->error('删除失败！',t('Goods/Cates_edit'));
+           $this->ajax('400','删除失败！');
        }
     }
 }
