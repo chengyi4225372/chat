@@ -86,7 +86,7 @@
                                     <tr>
                                         <td>手机号码</td>
                                         <td style="width:15%">
-                                            <input type="text" name="tel" value="" id="tel">
+                                            <input type="number" name="tel" value="" id="tel">
                                         </td>
                                     </tr>
                                     <tr>
@@ -158,10 +158,10 @@
             dataType:'json',
             success:function(res){
                 if(res.status=='200'){
-                    layer.msg(res.info);
+                    layer.alert(res.info,{icon:6});
                     window.location.href="{:T('Member/index')}";
                 }else{
-                    layer.msg(res.info);
+                    layer.alert(res.info,{icon:5});
                     location.reload();
                 }
             }

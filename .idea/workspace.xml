@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cb6b330-e09d-4458-b330-3e5fb779b5b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/MyClass/Member.php" beforeDir="false" afterPath="$PROJECT_DIR$/MyClass/Member.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Temp/Member/Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/Member/Index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Temp/Member/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/Member/add.html" afterDir="false" />
     </list>
@@ -37,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Temp/Member/add.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="150" column="45" lean-forward="true" selection-start-line="150" selection-start-column="45" selection-end-line="150" selection-end-column="45" />
+            <state relative-caret-position="340">
+              <caret line="165" column="17" lean-forward="true" selection-start-line="165" selection-start-column="17" selection-end-line="165" selection-end-column="17" />
               <folding>
                 <element signature="n#style#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#fieldset#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#1;n#tr#2;n#tbody#0;n#table#0;n#fieldset#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -63,16 +62,16 @@
         <entry file="file://$PROJECT_DIR$/MyClass/Member.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="462">
-              <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+              <caret line="51" column="39" lean-forward="true" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Temp/Member/Index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="148" column="17" lean-forward="true" selection-start-line="148" selection-start-column="17" selection-end-line="148" selection-end-column="17" />
+            <state relative-caret-position="405">
+              <caret line="145" column="46" lean-forward="true" selection-start-line="145" selection-start-column="46" selection-end-line="145" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -123,9 +122,9 @@
         <option value="$PROJECT_DIR$/Temp/Goods/Index.html" />
         <option value="$PROJECT_DIR$/Temp/Goods/cates_add.html" />
         <option value="$PROJECT_DIR$/Public/js/common.js" />
-        <option value="$PROJECT_DIR$/Temp/Member/add.html" />
         <option value="$PROJECT_DIR$/MyClass/Member.php" />
         <option value="$PROJECT_DIR$/Temp/Member/Index.html" />
+        <option value="$PROJECT_DIR$/Temp/Member/add.html" />
       </list>
     </option>
   </component>
@@ -151,17 +150,6 @@
             <path>
               <item name="huiqiyun" type="b2602c69:ProjectViewProjectNode" />
               <item name="huiqiyun" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="huiqiyun" type="b2602c69:ProjectViewProjectNode" />
-              <item name="huiqiyun" type="462c0819:PsiDirectoryNode" />
-              <item name="Chinax3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="huiqiyun" type="b2602c69:ProjectViewProjectNode" />
-              <item name="huiqiyun" type="462c0819:PsiDirectoryNode" />
-              <item name="Chinax3" type="462c0819:PsiDirectoryNode" />
-              <item name="Drive" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="huiqiyun" type="b2602c69:ProjectViewProjectNode" />
@@ -218,12 +206,12 @@
       <updated>1561086469830</updated>
       <workItem from="1561086476090" duration="17588000" />
       <workItem from="1561338306464" duration="24156000" />
-      <workItem from="1561423152094" duration="10352000" />
+      <workItem from="1561423152094" duration="11866000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52096000" />
+    <option name="totallyTimeSpent" value="53610000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -620,28 +608,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Temp/Member/add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="150" column="45" lean-forward="true" selection-start-line="150" selection-start-column="45" selection-end-line="150" selection-end-column="45" />
-          <folding>
-            <element signature="n#style#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#fieldset#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#1;n#tr#2;n#tbody#0;n#table#0;n#fieldset#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyClass/Member.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
-          <caret line="51" column="36" selection-start-line="51" selection-start-column="36" selection-end-line="51" selection-end-column="36" />
+          <caret line="51" column="39" lean-forward="true" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Temp/Member/Index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="148" column="17" lean-forward="true" selection-start-line="148" selection-start-column="17" selection-end-line="148" selection-end-column="17" />
+        <state relative-caret-position="405">
+          <caret line="145" column="46" lean-forward="true" selection-start-line="145" selection-start-column="46" selection-end-line="145" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Temp/Member/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="165" column="17" lean-forward="true" selection-start-line="165" selection-start-column="17" selection-end-line="165" selection-end-column="17" />
+          <folding>
+            <element signature="n#style#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#fieldset#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#2;n#tbody#0;n#table#0;n#fieldset#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

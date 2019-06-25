@@ -140,10 +140,10 @@
         var url = "{:T('Member/Del')}";
         $.post(url,{'id':id},function(res){
               if(res.status == '200'){
-               layer.alert(res.info);
+               layer.msg(res.info, {icon:6});
                window.location.href="{:T('Member/Index')}";
               }else{
-                layer.alert(res.info);
+                layer.msg(res.info, {icon:6});
                 window.location.reload();
               }
         },'json')
