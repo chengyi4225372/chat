@@ -43,4 +43,14 @@ class Member extends \MyClass\Common
         }
     }
 
+    public function Del(){
+        $id = $_POST['id'];
+        $result = $this->m('hqy_member')->where('id ='.$id)->del();
+        if($result){
+            $this->ajax('200','删除成功!');
+        }else{
+            $this->ajax('400','删除失败!');
+        }
+    }
+
 }

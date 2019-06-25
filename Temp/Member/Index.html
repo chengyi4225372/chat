@@ -103,6 +103,7 @@
                                     <td style='vertical-align:sub'>{$v['cates']}</td>
                                     <td style='vertical-align:sub;text-align:center'>
                                         <a class="btn mini green" href="{:T('Member/Edit?id='.$v['id'])}"><i class="icon-ok-sign"></i>详情</a>
+                                        <a class="btn mini red" href="javascript:Del({$v['id']})" onclick="return confirm('您确定删除？')"><i class="icon-ok-sign"></i>删除</a>
                                     </td>
                                 </tr>
                             </foreach>
@@ -134,3 +135,17 @@
 
 <!-- END CONTAINER -->
 <include file="Public/foot" />
+<script>
+    function Del(id){
+        var url = "{:T('Member/Del')}";
+        $.post(url,{'id':id},function(res){
+              if(res.status == '200'){
+               layer.alert(res.info);
+               window.location.href="{:T('Member/Index')}";
+              }else{
+                layer.alert(res.info);
+                window.location.reload();
+              }
+        },'json')
+    }
+</script>
