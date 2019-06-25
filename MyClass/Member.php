@@ -28,21 +28,17 @@ class Member extends \MyClass\Common
         if(!empty($id)){
             $result = $this->m('hqy_member')->where('id ='.$id)->save($data);
             if($result){
-                echo json_encode(array('code'=>200,'msg'=>'修改成功！'));
-                exit();
+                $this->ajax('200','修改成功!');
             }else{
-                echo json_encode(array('code'=>400,'msg'=>'修改失败！'));
-                exit();
+                $this->ajax('400','修改失败!');
             }
         }else{
             $data['create_time']=time();
             $result = $this->m('hqy_member')->add($data);
             if($result){
-                echo json_encode(array('code'=>200,'msg'=>'添加成功！'));
-                exit();
+                $this->ajax('200','添加成功!');
             }else{
-                echo json_encode(array('code'=>400,'msg'=>'添加失败！'));
-                exit();
+               $this->ajax('400','添加失败！');
             }
         }
     }
