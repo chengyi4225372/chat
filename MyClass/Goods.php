@@ -127,4 +127,5 @@ class Goods extends \MyClass\Common{
            $this->ajax('400','删除失败！');
        }
     }
+
 }
