@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cb6b330-e09d-4458-b330-3e5fb779b5b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyClass/Goods.php" beforeDir="false" afterPath="$PROJECT_DIR$/MyClass/Goods.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp/Goods/Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/Goods/Index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Temp/Goods/cates.html" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/Goods/cates.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/Goods/cates_add.html" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/Goods/cates_add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/Goods/cates_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/Goods/cates_edit.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyClass/Goods.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
+            <state relative-caret-position="190">
+              <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
               <folding>
                 <element signature="e#1945#2335#0#PHP" />
               </folding>
@@ -43,10 +41,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Chinax3/Drive/Url.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Temp/Goods/Index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="109" column="34" lean-forward="true" selection-start-line="109" selection-start-column="34" selection-end-line="109" selection-end-column="34" />
+            <state relative-caret-position="228">
+              <caret line="97" column="94" lean-forward="true" selection-start-line="97" selection-start-column="94" selection-end-line="97" selection-end-column="94" />
               <folding>
                 <element signature="n#style#0;n#td#3;n#tr#0;n#foreach#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#4;n#tr#0;n#foreach#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -55,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Temp/Goods/cates.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="136" column="54" selection-start-line="136" selection-start-column="54" selection-end-line="136" selection-end-column="54" />
+            <state relative-caret-position="2318">
+              <caret line="143" column="5" selection-start-line="143" selection-start-column="5" selection-end-line="143" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -123,11 +130,11 @@
         <option value="$PROJECT_DIR$/Chinax3/Func/Common.php" />
         <option value="$PROJECT_DIR$/Temp/Goods/add.html" />
         <option value="$PROJECT_DIR$/Temp/Goods/Edit.html" />
-        <option value="$PROJECT_DIR$/Temp/Goods/Index.html" />
-        <option value="$PROJECT_DIR$/MyClass/Goods.php" />
         <option value="$PROJECT_DIR$/Temp/Goods/cates_add.html" />
         <option value="$PROJECT_DIR$/Temp/Goods/cates_edit.html" />
         <option value="$PROJECT_DIR$/Temp/Goods/cates.html" />
+        <option value="$PROJECT_DIR$/MyClass/Goods.php" />
+        <option value="$PROJECT_DIR$/Temp/Goods/Index.html" />
       </list>
     </option>
   </component>
@@ -157,7 +164,13 @@
             <path>
               <item name="huiqiyun" type="b2602c69:ProjectViewProjectNode" />
               <item name="huiqiyun" type="462c0819:PsiDirectoryNode" />
-              <item name="MyClass" type="462c0819:PsiDirectoryNode" />
+              <item name="Chinax3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huiqiyun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huiqiyun" type="462c0819:PsiDirectoryNode" />
+              <item name="Chinax3" type="462c0819:PsiDirectoryNode" />
+              <item name="Drive" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="huiqiyun" type="b2602c69:ProjectViewProjectNode" />
@@ -209,12 +222,12 @@
       <updated>1561086469830</updated>
       <workItem from="1561086476090" duration="17588000" />
       <workItem from="1561338306464" duration="24156000" />
-      <workItem from="1561423152094" duration="4747000" />
+      <workItem from="1561423152094" duration="5010000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46491000" />
+    <option name="totallyTimeSpent" value="46754000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -282,20 +295,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Chinax3/Drive/Url.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chinax3/Drive/View.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-437">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Temp/Member/Edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-437">
@@ -370,13 +369,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Chinax3/C/Control.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Func/Editor.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -411,13 +403,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4571">
           <caret line="286" column="34" lean-forward="true" selection-start-line="286" selection-start-column="34" selection-end-line="286" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Chinax3/C/Action.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -596,16 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyClass/Goods.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="115" lean-forward="true" selection-start-line="115" selection-end-line="115" />
-          <folding>
-            <element signature="e#1945#2335#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Temp/Goods/cates_edit.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1336">
@@ -620,21 +595,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Temp/Goods/Index.html">
+    <entry file="file://$PROJECT_DIR$/Temp/Goods/cates.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="109" column="34" lean-forward="true" selection-start-line="109" selection-start-column="34" selection-end-line="109" selection-end-column="34" />
+        <state relative-caret-position="2318">
+          <caret line="143" column="5" selection-start-line="143" selection-start-column="5" selection-end-line="143" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chinax3/C/Action.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-741">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
           <folding>
-            <element signature="n#style#0;n#td#3;n#tr#0;n#foreach#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#td#4;n#tr#0;n#foreach#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#6#267#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Temp/Goods/cates.html">
+    <entry file="file://$PROJECT_DIR$/Chinax3/C/Control.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="136" column="54" selection-start-line="136" selection-start-column="54" selection-end-line="136" selection-end-column="54" />
+        <state relative-caret-position="57">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chinax3/Drive/View.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-456">
+          <caret line="9" column="6" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Chinax3/Drive/Url.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyClass/Goods.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="26" lean-forward="true" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding>
+            <element signature="e#1945#2335#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Temp/Goods/Index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="97" column="94" lean-forward="true" selection-start-line="97" selection-start-column="94" selection-end-line="97" selection-end-column="94" />
+          <folding>
+            <element signature="n#style#0;n#td#3;n#tr#0;n#foreach#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#4;n#tr#0;n#foreach#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
