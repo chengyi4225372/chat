@@ -53,4 +53,8 @@ class Member extends \MyClass\Common
         }
     }
 
+    //phpexcel 导入
+    public function Excel_upload(){
+
+    }
 }

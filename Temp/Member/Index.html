@@ -136,8 +136,8 @@
         //指定允许上传的文件类型
         upload.render({
             elem: '#test3'
-            , url: '/upload/'
-            , accept: 'file' //普通文件
+            , url: "{:T('Member/Excel_upload')}"
+            , accept: '.xlsx' //普通文件
             , done: function (res) {
                 console.log(res)
             }
