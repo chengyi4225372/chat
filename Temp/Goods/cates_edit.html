@@ -74,7 +74,7 @@
 
                     </div>
                     <div class="portlet-body form">
-                        <form id='basic_validate' class="form-horizontal" action="{:T('Goods/Cates_edit_do')}" method="post" enctype="multipart/form-data">
+                        <form id='basic_validate' class="form-horizontal" >
                             <input name="id" type="hidden" value="{$info['id']}">
                             <fieldset >
                                 <table class="table sliders table-striped">
@@ -85,7 +85,7 @@
                                                 <label class="control-label">编辑项目类型</label>
                                                 <div class="controls">
                                                     <div class=" bootstrap-timepicker-component">
-                                                        <input class="m-wrap m-ctrl-small" type="text" name="title" value="{$info['title']}">
+                                                        <input class="m-wrap m-ctrl-small" type="text" name="title" id="title" value="{$info['title']}">
                                                     </div>
                                                 </div>
                                             </div>
@@ -95,7 +95,7 @@
 
                                 </table>
                                 <div class="form-actions">
-                                    <button class="btn btn-primary green" type="submit">保存</button>
+                                    <button class="btn btn-primary green" type="button" id="edit_cates">保存</button>
                                 </div>
                             </fieldset>
                         </form>
@@ -119,3 +119,23 @@
 
 <!-- END CONTAINER -->
 <include file="Public/foot" />
+<script>
+    $('#edit_cates').click(function(){
+         var id= $("input[name='id']").val();
+         var title = $("input[name='title']").val();
+         var url = "{:T('Goods/Cates_edit_do')}";
+         if(title == ''|| title==undefined){
+             layer.tips('类型名称不能为空！','#title');
+             return false;
+         }
+         $.post(url,{'id':id,'title':title},function(e){
+              if(e.status== '200'){
+                  layer.alert(e.info,{icon: 6});
+                  window.location.reload();
+              }else{
+                  layer.alert(e.info,{icon: 6});
+                  window.location.reload();
+              }
+         },'json')
+    })
+</script>

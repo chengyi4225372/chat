@@ -100,16 +100,16 @@ class Goods extends \MyClass\Common{
             $data['create_time']=time();
             $result=$this->m('hqy_protuct_cate')->add($data);
             if($result){
-                $this->success('新增成功！',t('Goods/Cates'));
+                $this->ajax('200','添加成功！');
           }else{
-                $this->error('添加失败！',t('Goods/Cates'));
+                $this->ajax('400','添加失败!');
             }
         }else{
            $result= $this->m('hqy_protuct_cate')->where('id = '.$id)->save($data);
            if($result){
-               $this->success('编辑成功！',t('Goods/Cates'));
+               $this->ajax('200','编辑成功！');
            }else{
-               $this->error('编辑失败！',t('Goods/Cates'));
+               $this->ajax('400','编辑失败！');
            }
         }
     }

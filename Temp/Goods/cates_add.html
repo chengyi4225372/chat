@@ -74,7 +74,7 @@
 
                     </div>
                     <div class="portlet-body form">
-                        <form id='basic_validate' class="form-horizontal" action="{:T('Goods/Cates_edit_do')}" method="post" enctype="multipart/form-data">
+                        <form id='basic_validate' class="form-horizontal" action="{:T('Goods/')}" method="post" enctype="multipart/form-data">
                             <fieldset >
                                 <table class="table sliders table-striped">
                                     <tbody>
@@ -84,7 +84,7 @@
                                                 <label class="control-label">添加项目类型</label>
                                                 <div class="controls">
                                                     <div class=" bootstrap-timepicker-component">
-                                                        <input class="m-wrap m-ctrl-small" type="text" name="title" value="">
+                                                        <input class="m-wrap m-ctrl-small" type="text" name="title"  id='title' value="">
                                                     </div>
                                                 </div>
                                             </div>
@@ -94,7 +94,7 @@
 
                                 </table>
                                 <div class="form-actions">
-                                    <button class="btn btn-primary green" type="submit">保存</button>
+                                    <button class="btn btn-primary green" type="button" id="add_cates">保存</button>
                                 </div>
                             </fieldset>
                         </form>
@@ -118,3 +118,22 @@
 
 <!-- END CONTAINER -->
 <include file="Public/foot" />
+<script>
+    $('#add_cates').click(function(){
+        var title = $("input[name='title']").val();
+        if(title == '' || title== undefined){
+            layer.tips('请填写类型名称！','#title');
+            return false;
+        }
+       var  url ="{:T('Goods/Cates_edit_do')}";
+       $.post(url,{'title':title},function(e){
+             if(e.status == '200'){
+                  layer.msg(e.info);
+                  window.location.reload();
+             }else{
+                 layer.msg(e.info);
+                 window.location.reload();
+             }
+       },'json')
+    })
+</script>

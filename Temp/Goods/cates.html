@@ -134,6 +134,7 @@
         $.post(url,{'id':id},function(e){
              if(e.status == '200'){
                 layer.alert(e.msg);
+                window.location.href="{:T('Goods/cates')}";
              }else if(e.status=='404'){
                  layer.alert(e.msg);
              }else{
