@@ -4,7 +4,7 @@ class Goods extends \MyClass\Common{
 	public function Index(){
 		$c = $this->m('hqy_protuct')->count();
 		$p = e('Page',$c,50);
-		$list = $this->m('hqy_protuct')->limit($p->firstRow.','.$p->listRows)->select();
+		$list = $this->m('hqy_protuct a')->field("a.*,b.title")->join('hqy_protuct_cate b on b.id = a.cates_id')->order('create_time desc')->limit($p->firstRow.','.$p->listRows)->select();
 		$this->s('list',$list)->s('page',$p->show())->v('Goods/Index');
 	}
 
