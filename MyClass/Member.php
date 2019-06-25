@@ -15,7 +15,7 @@ class Member extends \MyClass\Common
     }
 
     public function add(){
-         $this->v();
+          $this->v();
     }
 
     public function Edit_do(){

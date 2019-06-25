@@ -91,7 +91,7 @@
                                     <td style='vertical-align:sub'>{$v['title']}</td>
                                     <td style='vertical-align:sub;text-align:center'>
                                         <a class="edit btn mini green" href="{:T('Goods/cates_edit?id='.$v['id'])}"> <i class="icon-pencil"></i>编辑</a>
-                                        <a class="delete btn mini blue"  href='javascript:cates_del({$v[id]})'  > <i class="icon-pencil"></i>删除</a>
+                                        <a class="delete btn mini blue"  href='javascript:cates_del({$v[id]})' onclick="return confirm('您确定删除吗？')" > <i class="icon-pencil"></i>删除</a>
                                     </td>
                                 </tr>
                             </foreach>
