@@ -53,8 +53,40 @@ class Member extends \MyClass\Common
         }
     }
 
+
+   public function excel_array($filenames){
+       require_once   ROOT.'/Extend/excel/PHPExcel/IOFactory.php';
+       //加载excel文件
+       $filename = $filenames;
+       $objPHPExcelReader = PHPExcel_IOFactory::load($filename);
+       $sheet = $objPHPExcelReader->getSheet(0);        // 读取第一个工作表(编号从 0 开始)
+       $highestRow = $sheet->getHighestRow();           // 取得总行数
+       $highestColumn = $sheet->getHighestColumn();     // 取得总列数
+       $arr = array('A','B','C','D','E','F','G','H','I','J','K','L','M', 'N','O','P','Q','R','S','T','U','V','W','X','Y','Z');
+       // 一次读取一列
+       $res_arr = array();
+       for ($row = 2; $row <= $highestRow; $row++) {
+           $row_arr = array();
+           for ($column = 0; $arr[$column] != 'F'; $column++) {
+               $val = $sheet->getCellByColumnAndRow($column, $row)->getValue();
+               $row_arr[] = $val;
+           }
+           $res_arr[] = $row_arr;
+       }
+       //return $res_arr;
+       var_dump($res_arr);
+       exit();
+   }
+
     //phpexcel 导入
     public function Excel_upload(){
-
+          $filenames = $_FILES['file']['name'];
+          $type = pathinfo($filenames);
+          if($type['extension'] != 'xlsx'){
+              $this->ajax('404','上传类型不符合要求！');
+          }
+         $res = $this->excel_array($filenames);
+          var_dump($res);
+          exit();
     }
 }
