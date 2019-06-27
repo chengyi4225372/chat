@@ -135,10 +135,10 @@
         }
          $.post(url,{'id':id,'title':title},function(e){
               if(e.status== '200'){
-                  layer.alert(e.info,{icon: 6});
+                  layer.alert(e.msg,{icon: 6});
                   window.location.reload();
               }else{
-                  layer.alert(e.info,{icon: 6});
+                  layer.alert(e.msg,{icon: 5});
                   window.location.reload();
               }
          },'json')
