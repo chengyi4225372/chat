@@ -99,7 +99,7 @@
 											<td style='vertical-align:sub'>{$v['money']}</td>
 											<td style='vertical-align:sub;text-align:center'>
 												<a class="edit btn mini blue" href="{:T('Goods/Edit?id='.$v['id'])}"> <i class="icon-pencil"></i> 详情</a>
-												<a class="delete btn mini red" href="{:T('Goods/Del_goods_order?id='.$v['id'])}" onclick="return confirm('你确定删除？')"> <i class="icon-pencil"></i> 删除</a>
+												<a class="delete btn mini red" href="javascript:Del_goods_order({$v[id]})" onclick="return confirm('你确定删除？')"> <i class="icon-pencil"></i> 删除</a>
 											</td>														
 										</tr>
 									</foreach>
@@ -131,3 +131,20 @@
 
 	<!-- END CONTAINER -->
 	<include file="Public/foot" />
+<script>
+	function Del_goods_order(id){
+		var url = "{:T('Goods/Del_goods_order')}";
+		var data = {'id':id};
+		$.get(url,data,function(res){
+			 if(res.status =='200'){
+			 	layer.msg(res.msg,{icon:6},function(){
+			 		parent.location.href="{:T('Goods/Index')}";
+				});
+			 }else{
+			 	layer.msg(res.msg,{icon:5,time:3000},function(){
+			 		parent.location.reload();
+				})
+			 }
+		},'json')
+	}
+</script>

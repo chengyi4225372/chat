@@ -38,7 +38,8 @@ class Member extends \MyClass\Common
             if($result){
                 $this->ajax('200','添加成功!');
             }else{
-               $this->ajax('400','添加失败！');
+//               $this->ajax('400','添加失败！');
+                return json_encode();
             }
         }
     }

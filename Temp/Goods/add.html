@@ -162,11 +162,12 @@
            data:{'title':title,'cates_id':cates_id,'info':info,'money':money,'person':person,'tel':tel,'paytype':paytype,'protuct_time':protuct_time},
            success:function(res){
               if(res.status == '200'){
-                  layer.alert(res.msg, {icon: 6});
-                  window.location.reload();
+                  layer.alert(res.msg, {icon: 6},function(){
+                      parent.location.href="{:T('Goods/Index')}";
+                  });
               }else{
                   layer.alert(res.msg,{time:3000,icon: 5});
-                  window.location.href="{:T('Goods/add')}";
+                  window.location.reload();
               }
            }
        })

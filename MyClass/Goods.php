@@ -55,9 +55,9 @@ class Goods extends \MyClass\Common{
          $id = $_GET['id'];
          $res = $this->m('hqy_protuct')->where('id ='.$id)->del();
          if($res){
-              $this->success('删除成功！',('Goods/index'));
+              $this->ajax('200','删除成功！');
          }else{
-             $this->error('删除失败！');
+             $this->ajax('400','删除失败！');
          }
     }
 
