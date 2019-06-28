@@ -135,12 +135,11 @@
 										<input type="radio" name="paytype" value="5" <if $info['paytype']== '5'> checked="" <else /> </if>>按年
 									</td>
 								</tr>
-								<!-- todo 时间段暂时未使用 -->
 								<tr>
 									<td>项目时间范围</td>
 									<td>
-										<input type="text" class="m-wrap m-ctrl-small"  name='protuct_time' id="dates"  <if $info['protuct_time'] != '0'> value="{$info['protuct_time']}" <else /> value='' </if>  >
-										<input type="radio" name="protuct_time" <if $info['protuct_time'] == '0' >checked=''<else /> </if> value="0">无限期
+										<input type="text" class="m-wrap m-ctrl-small"  name='protuct_time' id="dates" <if $info['protuct_time'] != 0> value="{$info['protuct_time']}" </if> >
+										<input type="radio" name="protuct_time" value="0" <if $info['protuct_time'] == 0 > checked="checked" </if> >无限期
 									</td>
 								</tr>
 								</tbody>
