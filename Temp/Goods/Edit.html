@@ -197,11 +197,13 @@
 			data:{'title':title,'cates_id':cates_id,'info':info,'money':money,'person':person,'tel':tel,'paytype':paytype,'protuct_time':protuct_time,'id':id},
 			success:function(res){
 				if(res.status == '200'){
-					layer.msg(res.msg, {icon: 6});
-					window.location.href="{:T('Goods/index')}";
+					layer.msg(res.msg, {icon: 6},function(){
+						parent.location.href="{:T('Goods/Index')}";
+					});
 				}else{
-					layer.msg(res.msg,{time:3000,icon: 5});
-					window.location.href="{:T('Goods/index')}";
+					layer.msg(res.msg,{time:3000,icon: 5},function(){
+						parent.location.reload();
+					});
 				}
 			}
 		})
