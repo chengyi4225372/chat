@@ -75,7 +75,6 @@ class Member extends \MyClass\Common
         if (!file_exists($files_path)) {
             $this->ajax('401','上传文件丢失');
          }
-
          $res = $this->excel_array($filenames,$path);
          if($res){
              $this->ajax('200','上传成功!');

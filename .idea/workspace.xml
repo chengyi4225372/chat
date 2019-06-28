@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cb6b330-e09d-4458-b330-3e5fb779b5b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Chinax3/Chinax3.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chinax3/Chinax3.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Chinax3/Extend/excel/PHPExcel.php" beforeDir="false" afterPath="$PROJECT_DIR$/Chinax3/Extend/excel/PHPExcel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/MyClass/Member.php" beforeDir="false" afterPath="$PROJECT_DIR$/MyClass/Member.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demo.xlsx" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,11 +21,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MyClass/Member.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="123" column="10" selection-start-line="123" selection-start-column="10" selection-end-line="123" selection-end-column="10" />
-              <folding>
-                <element signature="e#3013#3281#0#PHP" />
-              </folding>
+            <state relative-caret-position="295">
+              <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -209,7 +205,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93312000" />
+    <option name="totallyTimeSpent" value="93687000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -660,11 +656,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MyClass/Member.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="123" column="10" selection-start-line="123" selection-start-column="10" selection-end-line="123" selection-end-column="10" />
-          <folding>
-            <element signature="e#3013#3281#0#PHP" />
-          </folding>
+        <state relative-caret-position="295">
+          <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
         </state>
       </provider>
     </entry>
