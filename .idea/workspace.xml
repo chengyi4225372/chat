@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0cb6b330-e09d-4458-b330-3e5fb779b5b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Temp/Goods/Edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/Goods/Edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp/Public/left.html" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/Public/left.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,20 +26,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Temp/Public/left.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="141" column="34" lean-forward="true" selection-start-line="141" selection-start-column="34" selection-end-line="141" selection-end-column="34" />
+            <state relative-caret-position="285">
+              <caret line="135" column="45" selection-start-line="135" selection-start-column="45" selection-end-line="135" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Temp/Goods/Edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="204" column="49" selection-start-line="204" selection-start-column="49" selection-end-line="204" selection-end-column="49" />
+            <state relative-caret-position="372">
+              <caret line="206" column="17" lean-forward="true" selection-start-line="206" selection-start-column="17" selection-end-line="206" selection-end-column="17" />
               <folding>
                 <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#fieldset#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#fieldset#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -101,8 +101,8 @@
         <option value="$PROJECT_DIR$/Temp/Goods/add.html" />
         <option value="$PROJECT_DIR$/MyClass/Goods.php" />
         <option value="$PROJECT_DIR$/Temp/Goods/Index.html" />
-        <option value="$PROJECT_DIR$/Temp/Public/left.html" />
         <option value="$PROJECT_DIR$/Temp/Goods/Edit.html" />
+        <option value="$PROJECT_DIR$/Temp/Public/left.html" />
       </list>
     </option>
   </component>
@@ -131,13 +131,18 @@
             <path>
               <item name="huiqiyun" type="b2602c69:ProjectViewProjectNode" />
               <item name="huiqiyun" type="462c0819:PsiDirectoryNode" />
+              <item name="MyClass" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="huiqiyun" type="b2602c69:ProjectViewProjectNode" />
+              <item name="huiqiyun" type="462c0819:PsiDirectoryNode" />
               <item name="Temp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="huiqiyun" type="b2602c69:ProjectViewProjectNode" />
               <item name="huiqiyun" type="462c0819:PsiDirectoryNode" />
               <item name="Temp" type="462c0819:PsiDirectoryNode" />
-              <item name="Goods" type="462c0819:PsiDirectoryNode" />
+              <item name="Public" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -187,7 +192,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78532000" />
+    <option name="totallyTimeSpent" value="80317000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -255,13 +260,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Temp/Index/Caches.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2527">
-          <caret line="133" column="51" selection-start-line="133" selection-start-column="47" selection-end-line="133" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyClass/Order.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -624,17 +622,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Temp/Public/left.html">
+    <entry file="file://$PROJECT_DIR$/Temp/404.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="141" column="34" lean-forward="true" selection-start-line="141" selection-start-column="34" selection-end-line="141" selection-end-column="34" />
+        <state relative-caret-position="57">
+          <caret line="3" column="4" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Temp/Goods/Edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="204" column="49" selection-start-line="204" selection-start-column="49" selection-end-line="204" selection-end-column="49" />
+        <state relative-caret-position="372">
+          <caret line="206" column="17" lean-forward="true" selection-start-line="206" selection-start-column="17" selection-end-line="206" selection-end-column="17" />
           <folding>
             <element signature="n#style#0;n#td#0;n#tr#0;n#tbody#0;n#table#0;n#fieldset#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#1;n#tr#1;n#tbody#0;n#table#0;n#fieldset#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -643,6 +645,13 @@
             <element signature="n#style#0;n#td#1;n#tr#4;n#tbody#0;n#table#0;n#fieldset#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#1;n#tr#5;n#tbody#0;n#table#0;n#fieldset#0;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Temp/Public/left.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="135" column="45" selection-start-line="135" selection-start-column="45" selection-end-line="135" selection-end-column="45" />
         </state>
       </provider>
     </entry>
