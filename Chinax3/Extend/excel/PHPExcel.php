@@ -1,5 +1,7 @@
 <?php
 /** PHPExcel root directory */
+
+
 if (!defined('PHPEXCEL_ROOT')) {
     define('PHPEXCEL_ROOT', dirname(__FILE__) . '/');
     require(PHPEXCEL_ROOT . 'PHPExcel/Autoloader.php');
@@ -30,6 +32,8 @@ if (!defined('PHPEXCEL_ROOT')) {
  * @license    http://www.gnu.org/licenses/old-licenses/lgpl-2.1.txt    LGPL
  * @version    ##VERSION##, ##DATE##
  */
+
+
 class PHPExcel
 {
     /**
@@ -69,7 +73,7 @@ class PHPExcel
 
     /**
      * Active sheet index
-     *
+     *PHPExcel_IOFactory
      * @var integer
      */
     private $activeSheetIndex = 0;

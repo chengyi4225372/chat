@@ -36,7 +36,7 @@ class Chinax3{
 		new \C\Control();
 	}
 	public static function autoload($name){
-		$className = str_replace("\\","/",$name).".php";		
+		$className = str_replace("\\","/",$name).".php";
 		if(!include_once $className){
 			throw new Exception ("加载 {$className} 失败 ",3);
 		}
