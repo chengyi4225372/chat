@@ -1,0 +1,9 @@
+<?php
+namespace Myclass;
+
+class Login extends \MyClass\Common{
+
+    public function index(){
+        $this->v();
+    }
+}
