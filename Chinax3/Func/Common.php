@@ -11,6 +11,29 @@ function e($name,$args = null){
 	$class =  "\\Extend\\".$name;
 	return new $class($args);
 }
+
+//打印函数
+function halt($array){
+     echo "<pre/>";
+     var_dump($array);
+     exit();
+}
+
+//检测项目状态
+function check_status($time){
+    if($time == '0'|| $time['0'] == time()){
+        echo  "项目进行中！";
+    }else if($time['0'] > time()){
+        echo  "项目未开始!";
+    }else if($time['1'] < time()){
+        echo "项目已结束！";
+    }else {
+       echo  "项目进行中！";
+    }
+}
+
+
+
 if(!function_exists("T")){
 	function T($url){
 		$urls = parse_url($url);

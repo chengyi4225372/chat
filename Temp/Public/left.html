@@ -26,15 +26,15 @@
 				<li  >
 					<a href="javascript:;">
 					<i class="icon-user"></i>
-					<span class="title">用户管理</span>
+					<span class="title">员工管理</span>
 					</a>
 
 					<ul class="sub-menu" <if $_GET[m] == 'Member'>style="display: block;"</if>>
 				         <li<if $_GET[a]=='Add'>class='active'</if>>
-				         <a href="{:T('Member/add')}">添加用户</a>
+				         <a href="{:T('Member/add')}">添加员工</a>
 		 		         </li>
 			        	<li<if $_GET[a]=='Index' && $_GET[m] == "member">class='active'</if>>
-			         	<a href="{:T('Member/Index')}">用户列表</a>
+			         	<a href="{:T('Member/Index')}">员工列表</a>
 			        	</li>
 			  <!--
 						<li <if $_GET[a] == 'Vip'>class='active'</if>>
@@ -126,6 +126,17 @@
 					</ul>
 
 				</li>
+		    	<li>
+				<a href="javascript:;">
+					<i class="icon-cog"></i>
+					<span class="title">订单管理</span>
+				</a>
+				<ul class="sub-menu" <if $_GET[a] == 'Member'>style="display: block;"</if>>
+			    <li <if  $_GET[a] == 'Member'>class='active'</if>>
+		    	<a href="{:T('Rabc/Member')}">订单列表</a>
+		    	</li>
+			</ul>
+			</li>
 			   <li>
 				<a href="javascript:;">
 					<i class="icon-cog"></i>

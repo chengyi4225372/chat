@@ -5,6 +5,12 @@ class Goods extends \MyClass\Common{
 		$c = $this->m('hqy_protuct')->count();
 		$p = e('Page',$c,50);
 		$list = $this->m('hqy_protuct a')->field("a.*,b.title as btitle")->join('hqy_protuct_cate b on b.id = a.cates_id')->order('create_time desc')->limit($p->firstRow.','.$p->listRows)->select();
+		foreach($list as $k =>$val){
+		      $list[$k]['protuct_time'] = explode(' - ',$val['protuct_time']);
+              $list[$k]['protuct_time']['0']= strtotime($list[$k]['protuct_time']['0']);
+              $list[$k]['protuct_time']['1']= strtotime($list[$k]['protuct_time']['1']);
+        }
+		//halt($list);
 		$this->s('list',$list)->s('page',$p->show())->v('Goods/Index');
 	}
 

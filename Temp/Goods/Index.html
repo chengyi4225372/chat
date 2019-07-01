@@ -80,11 +80,12 @@
 									<thead>
 
 										<tr>
-											<th class="span6">订单编号</th>
+											<th class="span6">项目编号</th>
 											<th class="span3">创建时间</th>
 											<th class="span3">项目标题</th>
 											<th class="span3">项目分类</th>
 											<th class="span3">项目金额</th>
+											<th class="span3">项目状态</th>
 											<th class="span2">操作</th>
 										</tr>
 
@@ -97,10 +98,14 @@
 											<td style='vertical-align:sub'>{$v['title']}</td>
 											<td style='vertical-align:sub'>{$v['btitle']}</td>
 											<td style='vertical-align:sub'>{$v['money']}</td>
+											<td style='vertical-align:sub'>
+												<a class="edit btn mini red" > <i class="icon-pencil"></i>{:check_status($v['protuct_time'])}</a>
+											</td>
 											<td style='vertical-align:sub;text-align:center'>
-												<a class="edit btn mini blue" href="{:T('Goods/Edit?id='.$v['id'])}"> <i class="icon-pencil"></i> 详情</a>
+												<a class="edit btn mini blue" href="{:T('Goods/Edit?id='.$v['id'])}"> <i class="icon-pencil"></i> 编辑</a>
 												<a class="delete btn mini red" href="javascript:Del_goods_order({$v[id]})" onclick="return confirm('你确定删除？')"> <i class="icon-pencil"></i> 删除</a>
-											</td>														
+												<a class="delete btn mini green" href="javascript:"> <i class="icon-pencil"></i> 详情</a>
+											</td>
 										</tr>
 									</foreach>
 									</tbody>
@@ -147,4 +152,7 @@
 			 }
 		},'json')
 	}
+
+
+
 </script>
