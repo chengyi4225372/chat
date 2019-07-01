@@ -11,7 +11,7 @@ class Goods extends \MyClass\Common{
               $list[$k]['protuct_time']['1']= strtotime($list[$k]['protuct_time']['1']);
         }
 		//halt($list);
-		$this->s('list',$list)->s('page',$p->show())->v('Goods/Index');
+		$this->s('list',$list)->s('page',$p->show())->v();
 	}
 
 	public function add(){
