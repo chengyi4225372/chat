@@ -39,8 +39,8 @@
 						</ul>
 
 						<!-- END PAGE TITLE & BREADCRUMB-->
-
 					</div>
+
 
 				</div>
 
@@ -76,7 +76,6 @@
 								</div>
 
 								<table class="table table-striped table-hover table-bordered" id="sample_editable_1">
-
 									<thead>
 
 										<tr>
@@ -104,14 +103,14 @@
 											<td style='vertical-align:sub;text-align:center'>
 												<a class="edit btn mini blue" href="{:T('Goods/Edit?id='.$v['id'])}"> <i class="icon-pencil"></i> 编辑</a>
 												<a class="delete btn mini red" href="javascript:Del_goods_order({$v[id]})" onclick="return confirm('你确定删除？')"> <i class="icon-pencil"></i> 删除</a>
-												<a class="delete btn mini green" href="javascript:"> <i class="icon-pencil"></i> 详情</a>
+												<a class="delete btn mini green" href="{:T('Goods/Infos?id='.$v['id'])}"> <i class="icon-pencil"></i> 详情</a>
 											</td>
 										</tr>
 									</foreach>
 									</tbody>
 
 								</table>
-{$page}
+								<div id="demo2">{$page}</div>
 							</div>
 
 						</div>
@@ -153,6 +152,14 @@
 		},'json')
 	}
 
-
-
+</script>
+<script>
+	layui.use('laydate', function() {
+		var laydate = layui.laydate;
+		//日期范围
+		laydate.render({
+			elem: '#date'
+			,range: true
+		});
+	})
 </script>

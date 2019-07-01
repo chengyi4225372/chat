@@ -56,6 +56,12 @@ class Goods extends \MyClass\Common{
 
 	}
 
+	//项目详情
+    public function Infos(){
+	    $id  = $_GET['id'];
+	    $infos = $this->m('hqy_protuct a')->field('a.*,b.title as btitle,b.id')->join('hqy_protuct_cate b on a.cates_id = b.id')->where('a.id = '.$id)->find();
+	    $this->s('infos',$infos)->v();
+    }
 
 	public function Del_goods_order(){
          $id = $_GET['id'];
