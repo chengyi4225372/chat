@@ -13,7 +13,7 @@ class Member extends \MyClass\Common
     }
 
     public function Edit(){
-        $info =$this-> m('hqy_member')->find($_GET['id']);
+        $info =$this-> m('h_member')->find($_GET['id']);
         $this->s('info',$info)->v();
     }
 
@@ -29,7 +29,7 @@ class Member extends \MyClass\Common
         $data['cates']=trim($_POST['cates']);
         $data['remark']=trim($_POST['remark']);
         if(!empty($id)){
-            $result = $this->m('hqy_member')->where('id ='.$id)->save($data);
+            $result = $this->m('h_member')->where('id ='.$id)->save($data);
             if($result){
                 $this->ajax('200','修改成功!');
             }else{

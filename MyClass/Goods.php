@@ -67,4 +67,15 @@ class Goods extends \MyClass\Common{
          }
     }
 
+    //邀请 用户自己导入的员工
+    public function  set_person(){
+	    // todo 1.读取用户id
+
+        //todo 2.通过用户id 查询所属员工
+        $count = $this->m('h_member')->count();
+        $p = e('Page',$count,50);
+        $member =  $this->m('h_member')->order('create_time desc')->limit($p->firstRow.','.$p->listRows)->select();
+        $this->s('member',$member)->s('page',$p->show)->v();
+    }
+
 }
