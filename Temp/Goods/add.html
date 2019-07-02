@@ -59,15 +59,10 @@
                                         </td>
                                     </tr>
 
-                               <!-- todo 类型未设置-->
                                     <tr>
                                         <td>项目类型</td>
                                         <td style="width:15%">
-                                            <select name="cates_id" id="cates_id">
-                                                <foreach $cates as $vo>
-                                                    <option value="{$vo['id']}">{$vo['title']}</option>
-                                                </foreach>
-                                            </select>
+                                            <input type="text" name="cates" id="cates">
                                         </td>
                                     </tr>
                                     <tr>
@@ -107,12 +102,19 @@
                                             <input type="radio" name="paytype" value="5">按年
                                         </td>
                                     </tr>
-                                    <!-- todo 时间段暂时未使用 -->
                                     <tr>
                                         <td>项目时间范围</td>
                                         <td>
                                             <input type="text" class="m-wrap m-ctrl-small"  name='protuct_time' id="dates" placeholder="请填写开始时间 - 结束时间 ">
                                             <input type="radio" name="protuct_time" value="0">无限期
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>项目发布状态</td>
+                                        <td>
+                                         <input type="radio" name="status" value="0"  checked="">未开始
+                                         <input type="radio" name="status" value="1" >已开始
+                                         <input type="radio" name="status" value="2" > 已结束
                                         </td>
                                     </tr>
                                     </tbody>
@@ -148,7 +150,7 @@
 
     $('#add_good').click(function(){
        var title = $("input[name='title']").val();
-       var cates_id = $("#cates_id").val();
+       var cates = $("#cates").val();
        var info = $("#info").val();
        var money = $("input[name='money']").val();
        var person = $("input[name='person']").val();
@@ -159,7 +161,7 @@
            url:"{:T('Goods/EditDo')}",
            type:'post',
            dataType:'json',
-           data:{'title':title,'cates_id':cates_id,'info':info,'money':money,'person':person,'tel':tel,'paytype':paytype,'protuct_time':protuct_time},
+           data:{'title':title,'cates':cates,'info':info,'money':money,'person':person,'tel':tel,'paytype':paytype,'protuct_time':protuct_time},
            success:function(res){
               if(res.status == '200'){
                   layer.alert(res.msg, {icon: 6},function(){

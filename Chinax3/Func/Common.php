@@ -20,19 +20,15 @@ function halt($array){
 }
 
 //检测项目状态
-function check_status($time){
-    if($time == '0'|| $time['0'] == time()){
-        echo  "项目进行中！";
-    }else if($time['0'] > time()){
+function check_status($status){
+    if($status == '0'){
         echo  "项目未开始!";
-    }else if($time['1'] < time()){
-        echo "项目已结束！";
-    }else {
-       echo  "项目进行中！";
+    }else if($status == '1'){
+         echo '项目已开始！';
+    }else if($status == '2'){
+        echo  '项目已结束！';
     }
 }
-
-
 
 if(!function_exists("T")){
 	function T($url){

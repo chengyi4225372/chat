@@ -1,9 +1,9 @@
 <?php
 return array(
-	'hostname' => '127.0.0.1:3306',
+	'hostname' => '47.105.48.137',
 	'username' => 'root',
-	'password' => 'root',
-	'database' => 'huiqiyun',
+	'password' => 'bbb1root',
+	'database' => 'hqy',
 	'charset'  => 'utf8',
 	'pcennect' => '0',
 );

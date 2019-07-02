@@ -7,8 +7,8 @@ class Member extends \MyClass\Common
 
     public function Index()
     {
-        $p = e('Page',$this->m('hqy_member')->count(),50);
-        $list = $this->m('hqy_member')->limit($p->firstRow.','.$p->listRows)->select();
+        $p = e('Page',$this->m('h_member')->count(),50);
+        $list = $this->m('h_member')->limit($p->firstRow.','.$p->listRows)->select();
         $this->s('list',$list)->s('page',$p->show())->v();
     }
 
@@ -37,7 +37,7 @@ class Member extends \MyClass\Common
             }
         }else{
             $data['create_time']=time();
-            $result = $this->m('hqy_member')->add($data);
+            $result = $this->m('h_member')->add($data);
             if($result){
                 $this->ajax('200','添加成功!');
             }else{
@@ -48,7 +48,7 @@ class Member extends \MyClass\Common
 
     public function Del(){
         $id = $_POST['id'];
-        $result = $this->m('hqy_member')->where('id ='.$id)->del();
+        $result = $this->m('h_member')->where('id ='.$id)->del();
         if($result){
             $this->ajax('200','删除成功!');
         }else{

@@ -93,9 +93,6 @@
 						<span class="title">项目管理</span>
 					</a>
 					<ul class="sub-menu" <if $_GET[m] == 'Goods'>style="display: block;"</if> >
-		                <li <if $_GET[a] == 'cates'>class='active'</if>>
-		                    <a href="{:T('Goods/cates')}">项目类型</a>
-		                </li>
 						<li <if $_GET[a] == 'Add'>class='active'</if>>
 							<a href="{:T('Goods/add')}">添加项目</a>
 						</li>
@@ -137,20 +134,7 @@
 		    	</li>
 			</ul>
 			</li>
-			   <li>
-				<a href="javascript:;">
-					<i class="icon-cog"></i>
-					<span class="title">权限管理</span>
-				</a>
-				<ul class="sub-menu" <if $_GET[a] == 'Member'>style="display: block;"</if>>
-		    	<li <if  $_GET[a] == 'Member'>class='active'</if>>
-		        	<a href="{:T('Rabc/Member')}">基本设置</a>
-			    </li>
-		     	</ul>
-		    	</li>
-
 				<li>
-
 					<a href="javascript:;">
 					<i class="icon-cog"></i>
 					<span class="title">网站设置</span>

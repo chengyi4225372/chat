@@ -91,11 +91,7 @@
 								<tr>
 									<td>项目类型</td>
 									<td style="width:15%">
-										<select name="cates_id" id="cates_id">
-											<foreach $cates as $vo>
-												<option value="{$vo['id']}" <if $info['cates_id'] == $vo['id']> selected='' </if> >{$vo['title']}</option>
-											</foreach>
-										</select>
+										<input type="text" id="cates" name="cates" value="cates">
 									</td>
 								</tr>
 								<tr>
@@ -183,7 +179,7 @@
 	$('#save_goods').click(function(){
 		var id = $("input[name='id']").val();
 		var title = $("input[name='title']").val();
-		var cates_id = $("#cates_id").val();
+		var cates = $("#cates").val();
 		var info = $("#info").val();
 		var money = $("input[name='money']").val();
 		var person = $("input[name='person']").val();
@@ -194,7 +190,7 @@
 			url:"{:T('Goods/EditDo')}",
 			type:'post',
 			dataType:'json',
-			data:{'title':title,'cates_id':cates_id,'info':info,'money':money,'person':person,'tel':tel,'paytype':paytype,'protuct_time':protuct_time,'id':id},
+			data:{'title':title,'cates':cates,'info':info,'money':money,'person':person,'tel':tel,'paytype':paytype,'protuct_time':protuct_time,'id':id},
 			success:function(res){
 				if(res.status == '200'){
 					layer.msg(res.msg, {icon: 6},function(){

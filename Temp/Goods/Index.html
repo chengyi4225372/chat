@@ -95,10 +95,10 @@
 											<td style='vertical-align:sub'>{$v['order_num']}</td>
 											<td style='vertical-align:sub'>{:date('Y-m-d',$v['create_time'])}</td>
 											<td style='vertical-align:sub'>{$v['title']}</td>
-											<td style='vertical-align:sub'>{$v['btitle']}</td>
+											<td style='vertical-align:sub'>{$v['cates']}</td>
 											<td style='vertical-align:sub'>{$v['money']}</td>
 											<td style='vertical-align:sub'>
-												<a class="edit btn mini red" > <i class="icon-pencil"></i>{:check_status($v['protuct_time'])}</a>
+                                              {:check_status($v['status'])}
 											</td>
 											<td style='vertical-align:sub;text-align:center'>
 												<a class="edit btn mini blue" href="{:T('Goods/Edit?id='.$v['id'])}"> <i class="icon-pencil"></i> 编辑</a>
