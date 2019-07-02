@@ -109,7 +109,7 @@
 												<else  />
 												 <if $v['status'] == '1'>
 												<a class="edit btn mini green" href="{:T('Goods/Infos?id='.$v['id'])}"> <i class="icon-pencil"></i> 详情</a>
-												<a class="edit btn mini blue" href="{:T('Goods/set_person')}"> <i class="icon-pencil"></i> 邀请</a>
+												<a class="edit btn mini blue" href="{:T('Goods/set_person?order_num='.$v['order_num'].'&title='.$v['title'])}"> <i class="icon-pencil"></i> 邀请</a>
 												<else />
 												<a class="edit btn mini green" href="{:T('Goods/Infos?id='.$v['id'])}"> <i class="icon-pencil"></i> 详情</a>
 											    </if>
