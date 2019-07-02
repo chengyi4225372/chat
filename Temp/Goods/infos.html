@@ -78,9 +78,22 @@
                                         <td></td>
                                     </tr>
                                     <tr>
-                                        <td style="width:15%">项目需求</td>
+                                        <td style="width:15%">项目需求
+                                            <br/>
+                                        <span style="color:#ff0000;">*请至少填写30个汉字</span>
+                                        </td>
                                         <td>
                                             <textarea rows="8" cols="150">{$infos['info']}</textarea>
+                                        </td>
+                                        <td style="width:15%"></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="width:15%">项目发布状态</td>
+                                        <td>
+                                            <input type="radio" name="status" value="0" <if $infos['status'] == '0'> checked=""</if> >未开始
+                                            <input type="radio" name="status" value="1" <if $infos['status'] == '1'> checked=""</if>  >已开始
+                                            <input type="radio" name="status" value="2" <if $infos['status'] == '2'> checked=""</if>  > 已结束
                                         </td>
                                         <td style="width:15%"></td>
                                         <td></td>

@@ -138,6 +138,14 @@
 										<input type="radio" name="protuct_time" value="0" <if $info['protuct_time'] == 0 > checked="checked" </if> >无限期
 									</td>
 								</tr>
+								<tr>
+									<td>项目发布状态</td>
+									<td>
+										<input type="radio" name="status" value="0" <if $info['status'] == '0'> checked=""</if> >未开始
+										<input type="radio" name="status" value="1" <if $info['status'] == '1'> checked=""</if>  >已开始
+										<input type="radio" name="status" value="2" <if $info['status'] == '2'> checked=""</if>  > 已结束
+									</td>
+								</tr>
 								</tbody>
 								</table>
 							<div class="form-actions">
@@ -179,18 +187,23 @@
 	$('#save_goods').click(function(){
 		var id = $("input[name='id']").val();
 		var title = $("input[name='title']").val();
-		var cates = $("#cates").val();
+		var cates = $("input[name='cates']").val();
 		var info = $("#info").val();
 		var money = $("input[name='money']").val();
 		var person = $("input[name='person']").val();
 		var tel = $("input[name='tel']").val();
 		var paytype = $("input[name='paytype']:checked").val();
 		var protuct_time = $("input[name='protuct_time']").val();
+		var status = $("input[name='status']:checked").val();
 		$.ajax({
 			url:"{:T('Goods/EditDo')}",
 			type:'post',
 			dataType:'json',
-			data:{'title':title,'cates':cates,'info':info,'money':money,'person':person,'tel':tel,'paytype':paytype,'protuct_time':protuct_time,'id':id},
+			data:{'title':title,'cates':cates,'info':info,
+				  'money':money,'person':person,'tel':tel,
+				  'paytype':paytype,'protuct_time':protuct_time,
+				  'id':id,'status':status,
+			 },
 			success:function(res){
 				if(res.status == '200'){
 					layer.msg(res.msg, {icon: 6},function(){

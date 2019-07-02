@@ -157,19 +157,25 @@
        var tel = $("input[name='tel']").val();
        var paytype = $("input[name='paytype']:checked").val();
        var protuct_time = $("input[name='protuct_time']").val();
+       var status = $("input[name='status']:checked").val();
        $.ajax({
            url:"{:T('Goods/EditDo')}",
            type:'post',
            dataType:'json',
-           data:{'title':title,'cates':cates,'info':info,'money':money,'person':person,'tel':tel,'paytype':paytype,'protuct_time':protuct_time},
+           data:{'title':title,'cates':cates,'info':info,
+                 'money':money,'person':person,'tel':tel,
+                 'paytype':paytype,'protuct_time':protuct_time,
+                 'status':status,
+            },
            success:function(res){
               if(res.status == '200'){
                   layer.alert(res.msg, {icon: 6},function(){
                       parent.location.href="{:T('Goods/Index')}";
                   });
               }else{
-                  layer.alert(res.msg,{time:3000,icon: 5});
-                  window.location.reload();
+                  layer.alert(res.msg,{time:3000,icon: 5},function(){
+                      parent.location.reload();
+                  });
               }
            }
        })

@@ -101,9 +101,18 @@
                                               {:check_status($v['status'])}
 											</td>
 											<td style='vertical-align:sub;text-align:center'>
-												<a class="edit btn mini blue" href="{:T('Goods/Edit?id='.$v['id'])}"> <i class="icon-pencil"></i> 编辑</a>
+												<if $v['status'] == '0'>
+												<a class="edit btn mini red" href="{:T('Goods/Edit?id='.$v['id'])}"> <i class="icon-pencil"></i> 编辑</a>
+												<!--
 												<a class="delete btn mini red" href="javascript:Del_goods_order({$v[id]})" onclick="return confirm('你确定删除？')"> <i class="icon-pencil"></i> 删除</a>
+												-->
 												<a class="delete btn mini green" href="{:T('Goods/Infos?id='.$v['id'])}"> <i class="icon-pencil"></i> 详情</a>
+												<a class="delete btn mini blue" href="{:T('Goods/Infos?id='.$v['id'])}"> <i class="icon-pencil"></i> 邀请</a>
+												<else />
+												<a class="delete btn mini green" href="{:T('Goods/Infos?id='.$v['id'])}"> <i class="icon-pencil"></i> 详情</a>
+												<a class="delete btn mini blue" href="{:T('Goods/Infos?id='.$v['id'])}"> <i class="icon-pencil"></i> 邀请</a>
+												</if>
+
 											</td>
 										</tr>
 									</foreach>

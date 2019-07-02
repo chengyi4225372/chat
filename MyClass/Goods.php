@@ -5,12 +5,6 @@ class Goods extends \MyClass\Common{
 		$c = $this->m('h_protuct')->count();
 		$p = e('Page',$c,50);
 		$list = $this->m('h_protuct')->order('create_time desc')->limit($p->firstRow.','.$p->listRows)->select();
-		foreach($list as $k =>$val){
-		      $list[$k]['protuct_time'] = explode(' - ',$val['protuct_time']);
-              $list[$k]['protuct_time']['0']= strtotime($list[$k]['protuct_time']['0']);
-              $list[$k]['protuct_time']['1']= strtotime($list[$k]['protuct_time']['1']);
-        }
-		//halt($list);
 		$this->s('list',$list)->s('page',$p->show())->v();
 	}
 
@@ -34,6 +28,7 @@ class Goods extends \MyClass\Common{
          $data['tel']=$_POST['tel'];
          $data['paytype']=$_POST['paytype'];
          $data['protuct_time']=$_POST['protuct_time'];
+         $data['status'] = $_POST['status'];
          if(empty($id)){
              $data['create_time']= time();
              $data['order_num'] = uniqid(date('ymd').mt_rand(1000,9999));
@@ -57,13 +52,14 @@ class Goods extends \MyClass\Common{
 	//项目详情
     public function Infos(){
 	    $id  = $_GET['id'];
-	    $infos = $this->m('h_protuct')->field('a.*')->where('id = '.$id)->find();
+	    $infos = $this->m('h_protuct')->where('id = '.$id)->find();
 	    $this->s('infos',$infos)->v();
     }
 
+    // todo 暂时未使用 伪删除
 	public function Del_goods_order(){
          $id = $_GET['id'];
-         $res = $this->m('hqy_protuct')->where('id ='.$id)->del();
+         $res = $this->m('h_protuct')->where('id ='.$id)->del();
          if($res){
               $this->ajax('200','删除成功！');
          }else{
